@@ -52,7 +52,7 @@ export const ZeroBudgetGuideModal: React.FC<ZeroBudgetGuideModalProps> = ({
       id="zero-budget-guide-modal"
       className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-stone-900/60 backdrop-blur-xs transition-all animate-in fade-in"
     >
-      <div className="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden text-left">
+      <div className="relative w-full max-w-4xl xl:max-w-5xl max-h-[90vh] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden text-left">
         {/* Header */}
         <div className="flex items-center justify-between px-5 sm:px-6 py-3.5 sm:py-4 border-b border-stone-200 bg-stone-50/90">
           <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">

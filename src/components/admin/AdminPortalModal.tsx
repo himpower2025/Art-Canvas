@@ -141,10 +141,10 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
     if (isNewLesson) {
       const { id, ...rest } = editingLesson;
       addLesson(rest);
-      showToast('success', 'New curriculum syllabus added successfully.');
+      showToast('success', 'New art lesson added successfully.');
     } else {
       updateLesson(editingLesson.id, editingLesson);
-      showToast('success', 'Curriculum syllabus updated successfully.');
+      showToast('success', 'Art lesson updated successfully.');
     }
     setEditingLesson(null);
   };
@@ -313,7 +313,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-stone-950/70 backdrop-blur-md animate-fade-in text-left">
       <div 
-        className="relative w-full max-w-6xl h-[92vh] max-h-[900px] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden"
+        className="relative w-full max-w-6xl xl:max-w-7xl h-[92vh] max-h-[960px] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Dark Navigation Bar */}
@@ -362,10 +362,10 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
         {/* Tab Selection Bar */}
         <div className="bg-[#F8F7F4] border-b border-stone-200 px-4 sm:px-8 flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar shrink-0">
           {[
-            { id: 'curriculum', label: 'Curriculum Syllabi', count: lessons.length, icon: Layers },
+            { id: 'curriculum', label: 'Art Lessons', count: lessons.length, icon: Layers },
             { id: 'videos', label: 'Studio Workshops', count: videos.length, icon: Video },
             { id: 'prompt', label: 'Weekly Prompt', icon: Sparkles },
-            { id: 'gallery', label: 'Student Sanctuary', count: artworks.length, icon: ImageIcon },
+            { id: 'gallery', label: 'Student Gallery', count: artworks.length, icon: ImageIcon },
             { id: 'settings', label: 'Account & Data Backup', icon: Settings }
           ].map((tab) => {
             const Icon = tab.icon;
@@ -430,10 +430,10 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-stone-200">
                     <div>
                       <h3 className="font-display-custom font-bold text-lg sm:text-xl text-stone-900">
-                        Grade 1–10 Curriculum Syllabi
+                        Grade 1–10 Art Lessons
                       </h3>
                       <p className="text-xs text-stone-500 mt-0.5">
-                        Manage syllabus plans, zero-budget recipes, and emotional decompression goals.
+                        Manage art lessons, free supply recipes, and creative guides.
                       </p>
                     </div>
                     <button
@@ -546,15 +546,15 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                           const display = level === 'primary' 
                             ? 'Grades 1–5 (Primary)' 
                             : level === 'middle' 
-                            ? 'Grades 6–8 (Middle School)' 
-                            : 'Grades 9–10 (Secondary / SEE Prep)';
+                            ? 'Grades 6–8 (Middle)' 
+                            : 'Grades 9–10 (High School)';
                           setEditingLesson({ ...editingLesson, gradeLevel: level, gradeDisplay: display });
                         }}
                         className="w-full p-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs sm:text-sm text-stone-900 focus:bg-white"
                       >
-                        <option value="primary">Primary (Grades 1–5)</option>
-                        <option value="middle">Middle (Grades 6–8)</option>
-                        <option value="high">Secondary (Grades 9–10 / SEE Prep)</option>
+                        <option value="primary">Grades 1–5 (Primary)</option>
+                        <option value="middle">Grades 6–8 (Middle)</option>
+                        <option value="high">Grades 9–10 (High School)</option>
                       </select>
                     </div>
 
@@ -616,7 +616,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                     </div>
 
                     <div className="space-y-1 sm:col-span-2">
-                      <label className="text-xs font-semibold text-stone-700">Emotional Decompression Goal (SEE Exam Relief & Mental Wellness)</label>
+                      <label className="text-xs font-semibold text-stone-700">Creative Reflection Goal & Mindful Relaxation</label>
                       <textarea
                         rows={2}
                         value={editingLesson.emotionalGoal}
@@ -812,7 +812,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                     </div>
 
                     <div className="space-y-1 sm:col-span-2">
-                      <label className="text-xs font-semibold text-stone-700">Key Pedagogical Takeaway</label>
+                      <label className="text-xs font-semibold text-stone-700">Key Creative Takeaway</label>
                       <input
                         type="text"
                         value={editingVideo.keyTakeaway}
@@ -943,10 +943,10 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-stone-200">
                     <div>
                       <h3 className="font-display-custom font-bold text-lg sm:text-xl text-stone-900">
-                        Student Sanctuary Artwork Gallery
+                        Student Artwork Gallery
                       </h3>
                       <p className="text-xs text-stone-500 mt-0.5">
-                        Curate student artworks, mental wellness reflections, like counts, and community stories.
+                        Curate student artworks, creative stories, and student artist details.
                       </p>
                     </div>
                     <button

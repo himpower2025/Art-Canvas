@@ -27,24 +27,26 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-stone-200/80 transition-all">
       {/* Editorial Curatorial Micro-Bar */}
-      <div className="bg-[#1C1917] text-stone-300 px-4 sm:px-6 lg:px-8 py-1.5 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase flex items-center justify-between border-b border-stone-800/80">
-        <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D95338] animate-pulse" />
-          <span className="text-stone-200 font-semibold tracking-wider">CHOI ART STUDIO</span>
-          <span className="hidden md:inline text-stone-500">•</span>
-          <span className="hidden md:inline text-stone-400">FREE ART EDUCATION FOR NEPAL'S YOUTH</span>
-        </div>
-        <div className="flex items-center gap-4 text-stone-400">
-          <span className="hidden sm:inline font-mono tracking-wider text-[10px] text-stone-400">
-            KATHMANDU
-          </span>
-          <span className="hidden sm:inline text-stone-600">|</span>
-          <span className="text-[#D95338] font-medium tracking-normal font-mono text-[10px]">OPEN TO ALL</span>
+      <div className="bg-[#1C1917] text-stone-300 border-b border-stone-800/80">
+        <div className="studio-container py-1.5 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D95338] animate-pulse" />
+            <span className="text-stone-200 font-semibold tracking-wider">CHOI ART STUDIO</span>
+            <span className="hidden md:inline text-stone-500">•</span>
+            <span className="hidden md:inline text-stone-400">FREE ART EDUCATION FOR NEPAL'S YOUTH</span>
+          </div>
+          <div className="flex items-center gap-4 text-stone-400">
+            <span className="hidden sm:inline font-mono tracking-wider text-[10px] text-stone-400">
+              KATHMANDU
+            </span>
+            <span className="hidden sm:inline text-stone-600">|</span>
+            <span className="text-[#D95338] font-medium tracking-normal font-mono text-[10px]">OPEN TO ALL</span>
+          </div>
         </div>
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-3">
+      <div className="studio-container h-16 sm:h-18 flex items-center justify-between gap-4">
         {/* Brand Monogram & Exhibition Title */}
         <div 
           onClick={() => onSelectSection('hero')}

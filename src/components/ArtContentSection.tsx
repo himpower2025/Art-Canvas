@@ -25,10 +25,10 @@ export const ArtContentSection: React.FC<ArtContentSectionProps> = ({
 
   return (
     <section id="contents" className="py-16 md:py-24 bg-white border-b border-stone-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="studio-container">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-stone-200/80">
-          <div className="space-y-3 max-w-2xl text-left">
+          <div className="space-y-3 max-w-2xl xl:max-w-3xl text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] text-stone-700 text-xs font-mono tracking-widest uppercase border border-stone-300/80 shadow-2xs">
               <Video className="w-3.5 h-3.5 text-[#C84B31]" />
               <span>STATION 02 // VIDEO CLASSES</span>
@@ -72,7 +72,7 @@ export const ArtContentSection: React.FC<ArtContentSectionProps> = ({
         </div>
 
         {/* Video Cards Grid */}
-        <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 xl:gap-10">
           {filteredVideos.map((video, idx) => (
             <div
               key={video.id}

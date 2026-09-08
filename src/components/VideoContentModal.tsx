@@ -58,14 +58,14 @@ export const VideoContentModal: React.FC<VideoContentModalProps> = ({
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-4xl max-h-[94vh] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden text-left">
+      <div className="relative w-full max-w-4xl xl:max-w-5xl max-h-[94vh] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden text-left">
         {/* Top Bar */}
         <div className="flex items-center justify-between px-5 sm:px-6 py-3.5 border-b border-stone-200 bg-stone-50/90">
           <div className="flex items-center gap-2.5 min-w-0">
             <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#D95338]/10 text-[#D95338] whitespace-nowrap">
               {video.categoryLabel}
             </span>
-            <h3 className="font-display-custom font-bold text-sm sm:text-base text-stone-900 truncate">
+            <h3 className="font-display-custom font-bold text-sm sm:text-base xl:text-lg text-stone-900 truncate">
               {video.title}
             </h3>
           </div>
@@ -81,7 +81,7 @@ export const VideoContentModal: React.FC<VideoContentModalProps> = ({
 
         {/* Video Player Container */}
         <div className="flex-1 overflow-y-auto">
-          <div className="relative bg-stone-950 text-white w-full aspect-video max-h-[220px] sm:max-h-[340px] md:max-h-[440px] flex items-center justify-center overflow-hidden group">
+          <div className="relative bg-stone-950 text-white w-full aspect-video max-h-[220px] sm:max-h-[340px] md:max-h-[440px] xl:max-h-[520px] flex items-center justify-center overflow-hidden group">
             <img
               src={video.videoPoster}
               alt={video.title}

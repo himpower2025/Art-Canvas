@@ -387,7 +387,7 @@ export const ExpressiveCanvasModal: React.FC<ExpressiveCanvasModalProps> = ({
       id="expressive-canvas-modal"
       className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-stone-900/60 backdrop-blur-xs transition-all duration-300 animate-in fade-in"
     >
-      <div className="relative w-full max-w-5xl h-[92vh] max-h-[920px] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden text-left">
+      <div className="relative w-full max-w-6xl xl:max-w-7xl h-[94vh] max-h-[980px] bg-white rounded-3xl shadow-2xl border border-stone-200 flex flex-col overflow-hidden text-left">
         {/* Top Bar */}
         <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-3.5 border-b border-stone-200 bg-stone-50/90">
           <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">

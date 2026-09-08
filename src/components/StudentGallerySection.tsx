@@ -26,10 +26,10 @@ export const StudentGallerySection: React.FC<StudentGallerySectionProps> = ({
 
   return (
     <section id="gallery" className="py-16 md:py-24 bg-[#FAF8F5] border-b border-stone-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="studio-container">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-stone-200/80">
-          <div className="space-y-3 max-w-2xl text-left">
+          <div className="space-y-3 max-w-2xl xl:max-w-3xl text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-stone-700 text-xs font-mono tracking-widest uppercase border border-stone-300/80 shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-[#C84B31]" />
               <span>STATION 04 // STUDENT ART GALLERY</span>
@@ -80,7 +80,7 @@ export const StudentGallerySection: React.FC<StudentGallerySectionProps> = ({
         </div>
 
         {/* Gallery Grid */}
-        <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7 xl:gap-8">
           {filtered.map((item, idx) => (
             <div
               key={item.id}

@@ -22,8 +22,8 @@ export const Footer: React.FC<FooterProps> = ({
       {/* Archival ambient background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#C84B31]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 relative z-10">
-        <div className="grid md:grid-cols-12 gap-10 items-start">
+      <div className="studio-container space-y-14 relative z-10">
+        <div className="grid md:grid-cols-12 gap-10 xl:gap-14 items-start">
           {/* Brand Vision */}
           <div className="md:col-span-6 space-y-5 text-left">
             <div className="flex items-center gap-3">

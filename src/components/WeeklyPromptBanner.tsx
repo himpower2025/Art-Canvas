@@ -14,12 +14,12 @@ export const WeeklyPromptBanner: React.FC<WeeklyPromptBannerProps> = ({
 
   return (
     <section id="weekly-prompt" className="py-10 sm:py-14 bg-[#FAF8F5] border-b border-stone-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative bg-white rounded-3xl border border-stone-200/90 p-6 sm:p-9 lg:p-11 art-matting overflow-hidden text-left">
+      <div className="studio-container">
+        <div className="relative bg-white rounded-3xl border border-stone-200/90 p-6 sm:p-9 lg:p-11 xl:p-14 art-matting overflow-hidden text-left">
           {/* Subtle archival watermark seal */}
           <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-[#C84B31]/5 pointer-events-none" />
 
-          <div className="grid lg:grid-cols-12 gap-8 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 xl:gap-12 items-center">
             <div className="lg:col-span-8 space-y-5 text-left">
               <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
                 <span className="px-3.5 py-1 rounded-full bg-[#1C1917] text-white text-[11px] font-mono tracking-widest uppercase flex items-center gap-2 shrink-0 shadow-2xs">
@@ -32,15 +32,15 @@ export const WeeklyPromptBanner: React.FC<WeeklyPromptBannerProps> = ({
               </div>
 
               <div className="space-y-1">
-                <h2 className="font-display-custom font-normal text-2xl sm:text-3xl md:text-4xl text-stone-900 tracking-tight">
+                <h2 className="font-display-custom font-normal text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-stone-900 tracking-tight">
                   {prompt.title}
                 </h2>
-                <p className="font-editorial-custom italic text-lg sm:text-xl text-[#C84B31]">
+                <p className="font-editorial-custom italic text-lg sm:text-xl xl:text-2xl text-[#C84B31]">
                   {prompt.theme}
                 </p>
               </div>
 
-              <p className="text-xs sm:text-sm md:text-base text-stone-600 leading-relaxed font-sans-custom max-w-2xl">
+              <p className="text-xs sm:text-sm md:text-base xl:text-lg text-stone-600 leading-relaxed font-sans-custom max-w-2xl xl:max-w-3xl">
                 {prompt.description}
               </p>
 

@@ -147,11 +147,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-20">
+      <div className="studio-container relative z-10 space-y-20 sm:space-y-24 xl:space-y-28">
         {/* 2. Hero Grand Foyer: Editorial Typography & Live Easel */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 2xl:gap-20 items-center">
           {/* Left Column: Monumental Fine Art Editorial */}
-          <div className="lg:col-span-6 space-y-7 text-left">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-7 text-left">
             {/* Atelier Coordinates & Identity Stamp */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-xs border border-stone-300/80 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#C84B31] animate-ping" />
@@ -166,16 +166,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
             {/* Monumental Headline */}
             <div className="space-y-3">
-              <h1 className="font-display-custom font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[68px] text-stone-900 tracking-tight leading-[1.08]">
+              <h1 className="font-display-custom font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[62px] xl:text-[70px] text-stone-900 tracking-tight leading-[1.08]">
                 Art Belongs to <span className="font-semibold text-stone-900">Every Child</span>.
               </h1>
-              <p className="font-editorial-custom italic font-normal text-[#C84B31] text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-tight">
+              <p className="font-editorial-custom italic font-normal text-[#C84B31] text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-[42px] leading-tight">
                 Express what you feel through colors and lines.
               </p>
             </div>
 
             {/* Poetic Narrative Description */}
-            <div className="space-y-3.5 text-stone-600 text-sm sm:text-base leading-relaxed font-sans-custom max-w-xl">
+            <div className="space-y-3.5 text-stone-600 text-sm sm:text-base xl:text-lg leading-relaxed font-sans-custom max-w-xl xl:max-w-2xl">
               <p className="text-stone-700">
                 We believe art is not a test or an expensive hobby. It is the natural way young people discover who they are and share their hopes and stories with the world.
               </p>
@@ -263,12 +263,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xl:gap-8">
             {CURATED_EXHIBITS.map((item, index) => (
               <div 
                 key={item.title}
                 onClick={onViewStudentSanctuary}
-                className="group cursor-pointer art-matting rounded-2xl p-3 sm:p-4 border border-stone-200/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-left"
+                className="group cursor-pointer art-matting rounded-2xl p-3.5 sm:p-5 xl:p-6 border border-stone-200/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-left"
               >
                 {/* Artwork Matting Frame */}
                 <div className="relative aspect-4/3 w-full rounded-xl overflow-hidden bg-stone-100 border border-stone-200/80 mb-3.5">
@@ -306,7 +306,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
         </div>
 
         {/* 4. The 0-NPR Himalayan Apothecary & Chemistry Archive */}
-        <div className="art-matting rounded-3xl p-6 sm:p-9 border border-stone-200/90 text-left space-y-6">
+        <div className="art-matting rounded-3xl p-6 sm:p-9 xl:p-12 border border-stone-200/90 text-left space-y-6 xl:space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stone-200/70 pb-5">
             <div className="space-y-1.5">
               <div className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#C84B31] uppercase">
@@ -316,7 +316,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               <h3 className="font-display-custom font-normal text-2xl sm:text-3xl md:text-4xl text-stone-900 tracking-tight">
                 Turn Simple Nature into Beautiful Paints
               </h3>
-              <p className="text-xs sm:text-sm text-stone-500 max-w-2xl">
+              <p className="text-xs sm:text-sm text-stone-500 max-w-2xl xl:max-w-3xl">
                 Every home and school in Nepal has rich colors waiting to be found. From kitchen charcoal and tea leaves to river clay, here is how you can paint for free.
               </p>
             </div>
@@ -331,14 +331,14 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           </div>
 
           {/* Horizontal Pigment Bottles Selector */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 xl:gap-6">
             {NATURAL_RECIPES.map((item, idx) => {
               const isSelected = selectedRecipe === idx;
               return (
                 <button
                   key={item.name}
                   onClick={() => setSelectedRecipe(idx)}
-                  className={`p-3.5 rounded-2xl text-left transition-all border relative ${
+                  className={`p-3.5 xl:p-5 rounded-2xl text-left transition-all border relative ${
                     isSelected
                       ? 'border-[#C84B31] ring-2 ring-[#C84B31]/20 bg-stone-50 shadow-2xs'
                       : 'border-stone-200 hover:border-stone-300 bg-white'
@@ -408,11 +408,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-7">
             {/* Wing 1: Pedagogy */}
             <div 
               onClick={onExploreCurriculum}
-              className="group cursor-pointer p-6 rounded-3xl bg-white border border-stone-200/90 shadow-2xs hover:shadow-md hover:border-stone-300 transition-all text-left space-y-4 relative overflow-hidden"
+              className="group cursor-pointer p-6 xl:p-8 rounded-3xl bg-white border border-stone-200/90 shadow-2xs hover:shadow-md hover:border-stone-300 transition-all text-left space-y-4 relative overflow-hidden"
             >
               <div className="flex items-center justify-between">
                 <div className="w-10 h-10 rounded-2xl bg-[#1C1917] text-white flex items-center justify-center font-bold text-sm shadow-2xs group-hover:bg-[#C84B31] transition-colors">
