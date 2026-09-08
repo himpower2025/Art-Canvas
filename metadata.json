@@ -1,0 +1,6 @@
+{
+  "name": "CHOI Art Studio - Free Art Classes for Nepal's Youth",
+  "description": "Free, joyful art lessons for students and teachers across Nepal. Discover your creative voice, paint with natural colors, and learn step by step.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
