@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Video, Play, Clock, Sparkles, ArrowRight } from 'lucide-react';
 import { useAdminContent } from '../context/AdminContentContext';
 import { ArtMediaCategory, ArtMediaVideo } from '../types';
+import { BrushStrokeHighlight, ArtisticPaintDab } from './PainterlyBrushBackground';
 
 interface ArtContentSectionProps {
   onSelectVideo: (video: ArtMediaVideo) => void;
@@ -24,8 +25,12 @@ export const ArtContentSection: React.FC<ArtContentSectionProps> = ({
   const wellnessCount = videos.filter(v => v.category === 'wellness').length;
 
   return (
-    <section id="contents" className="py-16 md:py-24 bg-white border-b border-[#D4ECE1]">
-      <div className="studio-container">
+    <section id="contents" className="py-16 md:py-24 bg-white/80 backdrop-blur-xs border-b border-[#D4ECE1] relative overflow-hidden">
+      {/* Decorative paint marks */}
+      <ArtisticPaintDab className="absolute top-10 -left-6 hidden md:block opacity-60" size={85} />
+      <ArtisticPaintDab className="absolute bottom-8 right-8 hidden lg:block opacity-50" size={90} />
+
+      <div className="studio-container relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[#D4ECE1]">
           <div className="space-y-3 max-w-2xl xl:max-w-3xl text-left">
@@ -33,8 +38,15 @@ export const ArtContentSection: React.FC<ArtContentSectionProps> = ({
               <Video className="w-3.5 h-3.5 text-[#C84B31]" />
               <span>VIDEO LESSONS</span>
             </div>
-            <h2 className="font-display-custom font-normal text-3xl sm:text-4xl md:text-5xl text-stone-900 tracking-tight">
-              Video Classes & Workshops
+            <h2 className="font-display-custom font-normal text-3xl sm:text-4xl md:text-5xl text-stone-900 tracking-tight relative">
+              Video Classes &{' '}
+              <span className="font-medium text-stone-900 relative inline-block">
+                Workshops
+                <BrushStrokeHighlight
+                  variant="mint"
+                  className="absolute -bottom-1 left-0 w-full h-4 sm:h-5 -z-10"
+                />
+              </span>
             </h2>
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-sans-custom">
               Watch step-by-step videos on how to draw and paint. Learn how to create art with charcoal, tea wash, and natural colors at home or school.

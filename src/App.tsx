@@ -10,6 +10,7 @@ import { VideoContentModal } from './components/VideoContentModal';
 import { ExpressiveCanvasModal } from './components/ExpressiveCanvasModal';
 import { ZeroBudgetGuideModal } from './components/ZeroBudgetGuideModal';
 import { Footer } from './components/Footer';
+import { PainterlyBrushBackground } from './components/PainterlyBrushBackground';
 import { AdminLoginModal } from './components/admin/AdminLoginModal';
 import { AdminPortalModal } from './components/admin/AdminPortalModal';
 import { AdminContentProvider, useAdminContent } from './context/AdminContentContext';
@@ -65,7 +66,10 @@ function StudioApp() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F0F8F5] text-[#141312] font-sans-custom flex flex-col selection:bg-[#FF3B20] selection:text-white relative">
+    <div className="min-h-screen bg-[#F0F8F5] text-[#141312] font-sans-custom flex flex-col selection:bg-[#FF3B20] selection:text-white relative overflow-x-hidden">
+      {/* Hand-painted Atelier Brush Strokes Layer */}
+      <PainterlyBrushBackground />
+
       {/* Top Navigation */}
       <Navbar
         onOpenCanvas={() => handleOpenCanvas()}

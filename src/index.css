@@ -64,26 +64,26 @@
   scrollbar-width: none;
 }
 
-/* Organic Paper & Contemporary Studio Textures (Pastel Mint Atelier) */
+/* Organic Paper & Contemporary Studio Textures (Pastel Mint Atelier with Painterly Transparency) */
 .studio-grid {
-  background-color: #F0F8F5;
+  background-color: transparent;
   background-image: 
-    linear-gradient(to right, rgba(16, 94, 68, 0.032) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 94, 68, 0.032) 1px, transparent 1px);
+    linear-gradient(to right, rgba(16, 94, 68, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 94, 68, 0.035) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
 .studio-dots {
-  background-color: #F0F8F5;
-  background-image: radial-gradient(rgba(16, 94, 68, 0.055) 1px, transparent 1px);
+  background-color: transparent;
+  background-image: radial-gradient(rgba(16, 94, 68, 0.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .paper-texture {
-  background-color: #F0F8F5;
+  background-color: transparent;
   background-image: 
     radial-gradient(#D3ECE0 0.85px, transparent 0.85px), 
-    radial-gradient(#E1F4EB 0.85px, #F0F8F5 0.85px);
+    radial-gradient(#E1F4EB 0.85px, transparent 0.85px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }

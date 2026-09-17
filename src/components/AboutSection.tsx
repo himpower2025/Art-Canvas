@@ -16,6 +16,7 @@ import {
   Award
 } from 'lucide-react';
 import { LiveStudioWorkbench } from './LiveStudioWorkbench';
+import { BrushStrokeHighlight, ArtisticPaintDab } from './PainterlyBrushBackground';
 
 interface AboutSectionProps {
   onOpenCanvas: () => void;
@@ -165,9 +166,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </div>
 
             {/* Monumental Headline */}
-            <div className="space-y-3">
-              <h1 className="font-display-custom font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[68px] text-stone-900 tracking-tight leading-[1.08]">
-                Express Who You Are <span className="font-semibold text-stone-900">Through Art</span>.
+            <div className="space-y-3 relative">
+              <h1 className="font-display-custom font-normal text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[68px] text-stone-900 tracking-tight leading-[1.08] relative">
+                Express Who You Are{' '}
+                <span className="font-semibold text-stone-900 relative inline-block">
+                  Through Art
+                  <BrushStrokeHighlight
+                    variant="mint"
+                    className="absolute -bottom-1 sm:-bottom-2.5 left-0 w-full h-4 sm:h-6 -z-10"
+                  />
+                </span>.
               </h1>
               <p className="font-editorial-custom italic font-normal text-[#C84B31] text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[38px] leading-tight">
                 Where learning and creative fun come together.
@@ -234,7 +242,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           </div>
 
           {/* Right Column: Live Interactive Atelier Easel */}
-          <div className="lg:col-span-6 w-full">
+          <div className="lg:col-span-6 w-full relative">
+            <ArtisticPaintDab className="absolute -top-6 -right-6 hidden sm:block opacity-70" size={72} />
             <LiveStudioWorkbench
               onOpenFullCanvas={onOpenCanvas}
               onOpenZeroBudgetGuide={onOpenZeroBudgetGuide}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Play, Clock, Layers, ArrowRight, BookOpen, Brush } from 'lucide-react';
 import { useAdminContent } from '../context/AdminContentContext';
 import { GradeLevel, Lesson } from '../types';
+import { BrushStrokeHighlight, ArtisticPaintDab } from './PainterlyBrushBackground';
 
 interface CurriculumSectionProps {
   onSelectLesson: (lesson: Lesson) => void;
@@ -25,8 +26,12 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({
   const highCount = lessons.filter(l => l.gradeLevel === 'high').length;
 
   return (
-    <section id="curriculum" className="py-16 md:py-24 bg-[#F0F8F5] border-b border-[#D4ECE1]">
-      <div className="studio-container">
+    <section id="curriculum" className="py-16 md:py-24 bg-[#F0F8F5]/80 backdrop-blur-xs border-b border-[#D4ECE1] relative overflow-hidden">
+      {/* Decorative paint marks */}
+      <ArtisticPaintDab className="absolute top-8 right-10 hidden lg:block opacity-60" size={80} />
+      <ArtisticPaintDab className="absolute bottom-12 -left-6 hidden md:block opacity-50" size={90} />
+
+      <div className="studio-container relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[#D4ECE1]">
           <div className="space-y-3 max-w-2xl xl:max-w-3xl text-left">
@@ -34,8 +39,15 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({
               <Layers className="w-3.5 h-3.5 text-[#C84B31]" />
               <span>ART LESSONS</span>
             </div>
-            <h2 className="font-display-custom font-normal text-3xl sm:text-4xl md:text-5xl text-stone-900 tracking-tight">
-              Art Lessons for Grades 1 to 10
+            <h2 className="font-display-custom font-normal text-3xl sm:text-4xl md:text-5xl text-stone-900 tracking-tight relative">
+              Art Lessons for{' '}
+              <span className="font-medium text-stone-900 relative inline-block">
+                Grades 1 to 10
+                <BrushStrokeHighlight
+                  variant="mint"
+                  className="absolute -bottom-1 left-0 w-full h-4 sm:h-5 -z-10"
+                />
+              </span>
             </h2>
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-sans-custom">
               Step-by-step drawing lessons for students across Nepal. Learn skills, have fun, and express your creative ideas.

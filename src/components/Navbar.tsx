@@ -69,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Desktop Curatorial Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 bg-[#F2ECE1]/80 p-1.5 rounded-full border border-stone-300/70 shadow-2xs">
+        <nav className="hidden lg:flex items-center gap-1 bg-[#E1F2EA] p-1.5 rounded-full border border-[#CCE8DB] shadow-2xs">
           {navItems.map((item) => (
             <button
               key={item.id}

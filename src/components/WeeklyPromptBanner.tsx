@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, Calendar, ArrowUpRight, HelpCircle, Compass, Feather } from 'lucide-react';
 import { useAdminContent } from '../context/AdminContentContext';
+import { BrushStrokeHighlight, ArtisticPaintDab } from './PainterlyBrushBackground';
 
 interface WeeklyPromptBannerProps {
   onOpenCanvasWithPrompt: (promptTitle: string) => void;
@@ -13,9 +14,13 @@ export const WeeklyPromptBanner: React.FC<WeeklyPromptBannerProps> = ({
   const prompt = weeklyPrompt;
 
   return (
-    <section id="weekly-prompt" className="py-10 sm:py-14 bg-[#F0F8F5] border-b border-[#D4ECE1]">
-      <div className="studio-container">
-        <div className="relative bg-white rounded-3xl border border-[#D4ECE1] p-6 sm:p-9 lg:p-11 xl:p-14 art-matting overflow-hidden text-left">
+    <section id="weekly-prompt" className="py-10 sm:py-14 bg-[#F0F8F5]/70 backdrop-blur-xs border-b border-[#D4ECE1] relative overflow-hidden">
+      {/* Painterly background dabs */}
+      <ArtisticPaintDab className="absolute -bottom-8 right-16 hidden sm:block opacity-65" size={100} />
+      <ArtisticPaintDab className="absolute top-4 left-10 hidden md:block opacity-50" size={70} />
+
+      <div className="studio-container relative z-10">
+        <div className="relative bg-white/95 rounded-3xl border border-[#D4ECE1] p-6 sm:p-9 lg:p-11 xl:p-14 art-matting overflow-hidden text-left">
           {/* Subtle archival watermark seal */}
           <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-[#C84B31]/5 pointer-events-none" />
 
