@@ -22,7 +22,7 @@ const COLOR_PALETTES = [
   { name: 'Himalayan Indigo', hex: '#2B4C7E', description: 'High altitude prayer flag blue' },
   { name: 'Pine Moss', hex: '#3E6047', description: 'Valley pine forest' },
   { name: 'Terracotta Earth', hex: '#A0522D', description: 'Bhaktapur clay earth' },
-  { name: 'Snow Cream', hex: '#FAF8F5', description: 'Himalayan dawn light' },
+  { name: 'Pastel Mint', hex: '#F0F8F5', description: 'Himalayan fresh morning air' },
 ];
 
 export const ExpressiveCanvasModal: React.FC<ExpressiveCanvasModalProps> = ({
@@ -576,13 +576,13 @@ export const ExpressiveCanvasModal: React.FC<ExpressiveCanvasModalProps> = ({
                       className={`group relative h-8 sm:h-9 rounded-xl border flex items-center justify-center transition-all ${
                         isSelected ? 'ring-2 ring-stone-900 ring-offset-2 scale-105' : 'hover:scale-105'
                       }`}
-                      style={{ backgroundColor: color.hex, borderColor: color.hex === '#FAF8F5' ? '#D6D3D1' : color.hex }}
+                      style={{ backgroundColor: color.hex, borderColor: color.hex === '#F0F8F5' ? '#D6D3D1' : color.hex }}
                       title={`${color.name}: ${color.description}`}
                     >
                       {isSelected && (
                         <div
                           className={`w-2 h-2 rounded-full ${
-                            color.hex === '#FAF8F5' ? 'bg-stone-900' : 'bg-white'
+                            color.hex === '#F0F8F5' ? 'bg-stone-900' : 'bg-white'
                           }`}
                         />
                       )}

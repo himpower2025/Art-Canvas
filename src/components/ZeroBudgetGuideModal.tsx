@@ -61,10 +61,10 @@ export const ZeroBudgetGuideModal: React.FC<ZeroBudgetGuideModalProps> = ({
             </div>
             <div className="min-w-0">
               <h3 className="font-display-custom font-bold text-sm sm:text-base md:text-lg text-stone-900 truncate">
-                Free Natural Art Supplies Guide
+                Natural Paints & Materials Guide
               </h3>
               <p className="text-[10px] sm:text-xs text-stone-500 truncate">
-                Simple ways to make art with items from your kitchen, garden, and fireplace
+                Easy ways to make safe colors with charcoal, tea, and flower petals
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export const ZeroBudgetGuideModal: React.FC<ZeroBudgetGuideModalProps> = ({
         {/* Content */}
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
           <div className="p-3.5 sm:p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-stone-800 text-xs sm:text-sm leading-relaxed">
-            <strong className="text-emerald-900">Art is for Everyone:</strong> Great art doesn't require expensive stores. For centuries, artists painted breathtaking stories with soot, clay, tea, and flower petals. If your school or home has no store-bought art supplies, you can create wonderful artwork using nature all around you.
+            <strong className="text-emerald-900">Colors from Nature:</strong> Nature is full of beautiful colors. You can make rich black paint with charcoal, warm brown with tea, and vibrant red with flower petals. It is safe, fun, and easy for any school classroom.
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">

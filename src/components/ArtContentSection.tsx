@@ -24,26 +24,26 @@ export const ArtContentSection: React.FC<ArtContentSectionProps> = ({
   const wellnessCount = videos.filter(v => v.category === 'wellness').length;
 
   return (
-    <section id="contents" className="py-16 md:py-24 bg-white border-b border-stone-200/80">
+    <section id="contents" className="py-16 md:py-24 bg-white border-b border-[#D4ECE1]">
       <div className="studio-container">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-stone-200/80">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[#D4ECE1]">
           <div className="space-y-3 max-w-2xl xl:max-w-3xl text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] text-stone-700 text-xs font-mono tracking-widest uppercase border border-stone-300/80 shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF6F0] text-stone-700 text-xs font-mono tracking-widest uppercase border border-[#D4ECE1] shadow-2xs">
               <Video className="w-3.5 h-3.5 text-[#C84B31]" />
-              <span>STATION 02 // VIDEO CLASSES</span>
+              <span>VIDEO LESSONS</span>
             </div>
             <h2 className="font-display-custom font-normal text-3xl sm:text-4xl md:text-5xl text-stone-900 tracking-tight">
-              Video Classes & Studio Workshops
+              Video Classes & Workshops
             </h2>
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-sans-custom">
-              Watch artists show you how to paint, draw, and create step by step. Learn how to work with natural tea washes, firewood charcoal, and ink from the comfort of home or school.
+              Watch step-by-step videos on how to draw and paint. Learn how to create art with charcoal, tea wash, and natural colors at home or school.
             </p>
           </div>
 
           {/* Category Filter Tabs */}
           <div className="w-full md:w-auto overflow-x-auto no-scrollbar py-1">
-            <div className="inline-flex items-center gap-1.5 bg-[#FAF8F5] p-1.5 rounded-2xl border border-stone-300/80 min-w-max shadow-2xs">
+            <div className="inline-flex items-center gap-1.5 bg-[#EAF6F0] p-1.5 rounded-2xl border border-[#CCE8DB] min-w-max shadow-2xs">
               {[
                 { id: 'all', label: 'All Videos', count: videos.length },
                 { id: 'masterclass', label: 'Studio Classes', count: masterclassCount },
@@ -140,7 +140,7 @@ export const ArtContentSection: React.FC<ArtContentSectionProps> = ({
                   </p>
 
                   {/* Key Takeaway box */}
-                  <div className="p-4 rounded-xl bg-[#FAF8F5] border-l-2 border-[#C84B31] text-xs text-stone-700 leading-relaxed space-y-1">
+                  <div className="p-4 rounded-xl bg-[#F2FAF6] border-l-2 border-[#C84B31] text-xs text-stone-700 leading-relaxed space-y-1">
                     <span className="font-mono text-[10px] text-stone-500 uppercase tracking-wider block">
                       Artist's Advice:
                     </span>
@@ -173,7 +173,7 @@ export const ArtContentSection: React.FC<ArtContentSectionProps> = ({
                 <div className="flex items-center gap-2 shrink-0">
                   <button
                     onClick={() => onOpenCanvasWithVideo(video.title)}
-                    className="p-2.5 rounded-xl text-stone-500 hover:text-[#C84B31] hover:bg-[#FAF8F5] transition-colors"
+                    className="p-2.5 rounded-xl text-stone-500 hover:text-[#C84B31] hover:bg-[#EAF6F0] transition-colors"
                     title="Practice this on Canvas"
                   >
                     <Sparkles className="w-4 h-4" />

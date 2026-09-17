@@ -421,7 +421,7 @@ export const AdminPortalModal: React.FC<AdminPortalModalProps> = ({
         )}
 
         {/* Tab Content Area */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-[#FBFBFA]">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-[#F0F8F5]">
           {/* TAB 1: CURRICULUM MANAGEMENT */}
           {activeTab === 'curriculum' && (
             <div className="space-y-6">

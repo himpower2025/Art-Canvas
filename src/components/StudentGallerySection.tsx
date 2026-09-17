@@ -25,27 +25,27 @@ export const StudentGallerySection: React.FC<StudentGallerySectionProps> = ({
   });
 
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-[#FAF8F5] border-b border-stone-200/80">
+    <section id="gallery" className="py-16 md:py-24 bg-[#F0F8F5] border-b border-[#D4ECE1]">
       <div className="studio-container">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-stone-200/80">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[#D4ECE1]">
           <div className="space-y-3 max-w-2xl xl:max-w-3xl text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-stone-700 text-xs font-mono tracking-widest uppercase border border-stone-300/80 shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-stone-700 text-xs font-mono tracking-widest uppercase border border-[#D4ECE1] shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-[#C84B31]" />
-              <span>STATION 04 // STUDENT ART GALLERY</span>
+              <span>STUDENT GALLERY</span>
             </div>
             <h2 className="font-display-custom font-normal text-3xl sm:text-4xl md:text-5xl text-stone-900 tracking-tight">
-              Artworks Created by Nepali Students
+              Artworks by Nepali Students
             </h2>
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-sans-custom">
-              Bright, honest art created by children and youth sharing their stories, dreams, and surroundings. Each piece celebrates personal creativity and pride from schools across Nepal.
+              Genuine drawings and paintings made by students taught by our trained teachers. Real proof of how art builds joy and creative confidence.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 w-full md:w-auto">
             {/* Filter buttons */}
             <div className="overflow-x-auto no-scrollbar py-1">
-              <div className="inline-flex items-center gap-1.5 bg-[#F2ECE1]/80 p-1.5 rounded-2xl border border-stone-300/80 min-w-max shadow-2xs">
+              <div className="inline-flex items-center gap-1.5 bg-[#E4F4EC] p-1.5 rounded-2xl border border-[#CCE8DB] min-w-max shadow-2xs">
                 {[
                   { id: 'all', label: 'All Artworks' },
                   { id: 'primary', label: 'Grades 1–5 (Primary)' },
@@ -191,7 +191,7 @@ export const StudentGallerySection: React.FC<StudentGallerySectionProps> = ({
             </div>
 
             {/* Details Column */}
-            <div className="md:w-1/2 p-6 sm:p-7 flex flex-col justify-between overflow-y-auto space-y-4 text-left bg-[#FAF8F5]">
+            <div className="md:w-1/2 p-6 sm:p-7 flex flex-col justify-between overflow-y-auto space-y-4 text-left bg-[#F0F8F5]">
               <div className="space-y-3.5">
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider bg-stone-900 text-stone-100">

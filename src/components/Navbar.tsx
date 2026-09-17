@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-stone-200/80 transition-all">
+    <header className="sticky top-0 z-40 bg-[#F0F8F5]/95 backdrop-blur-md border-b border-[#D4ECE1] transition-all">
       {/* Editorial Curatorial Micro-Bar */}
       <div className="bg-[#1C1917] text-stone-300 border-b border-stone-800/80">
         <div className="studio-container py-1.5 text-[10px] sm:text-[11px] font-mono tracking-widest uppercase flex items-center justify-between">
@@ -33,14 +33,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="w-1.5 h-1.5 rounded-full bg-[#D95338] animate-pulse" />
             <span className="text-stone-200 font-semibold tracking-wider">CHOI ART STUDIO</span>
             <span className="hidden md:inline text-stone-500">•</span>
-            <span className="hidden md:inline text-stone-400">FREE ART EDUCATION FOR NEPAL'S YOUTH</span>
+            <span className="hidden md:inline text-stone-400">RESEARCHING ART AS SELF-EXPRESSION • TEACHER TRAINING FOR NEPAL'S SCHOOLS</span>
           </div>
           <div className="flex items-center gap-4 text-stone-400">
             <span className="hidden sm:inline font-mono tracking-wider text-[10px] text-stone-400">
               KATHMANDU
             </span>
             <span className="hidden sm:inline text-stone-600">|</span>
-            <span className="text-[#D95338] font-medium tracking-normal font-mono text-[10px]">OPEN TO ALL</span>
+            <span className="text-[#D95338] font-medium tracking-normal font-mono text-[10px]">EDUCATION & JOY</span>
           </div>
         </div>
       </div>
@@ -52,8 +52,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           onClick={() => onSelectSection('hero')}
           className="cursor-pointer flex items-center gap-3 group select-none shrink-0"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#1C1917] text-[#FAF8F5] border border-stone-700/60 flex items-center justify-center font-display-custom font-medium text-2xl shadow-sm shrink-0 group-hover:border-[#D95338] transition-colors relative overflow-hidden">
-            <span className="relative z-10 text-[#FAF8F5]">C</span>
+          <div className="w-10 h-10 rounded-xl bg-[#1C1917] text-[#F0F8F5] border border-stone-700/60 flex items-center justify-center font-display-custom font-medium text-2xl shadow-sm shrink-0 group-hover:border-[#D95338] transition-colors relative overflow-hidden">
+            <span className="relative z-10 text-[#F0F8F5]">C</span>
             <div className="absolute inset-0 bg-radial from-[#D95338]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <div>
@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </div>
             <p className="text-[10px] text-stone-500 font-sans-custom font-medium tracking-wider uppercase mt-0.5">
-              Free Art for Nepal's Youth
+              Art as Expression • Teacher Training
             </p>
           </div>
         </div>
@@ -89,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={onOpenZeroBudgetGuide}
             className="px-3.5 py-1.5 rounded-full text-xs font-medium text-stone-700 hover:text-stone-900 hover:bg-white/50 transition-all flex items-center gap-1.5 whitespace-nowrap min-h-[34px]"
           >
-            <span>Free Colors (0 NPR)</span>
+            <span>Natural Materials Guide</span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#D95338]" />
           </button>
         </nav>
@@ -135,7 +135,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-stone-200 bg-[#FAF8F5] px-4 py-4 space-y-3 shadow-lg animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden border-t border-[#D4ECE1] bg-[#F0F8F5] px-4 py-4 space-y-3 shadow-lg animate-in slide-in-from-top-2 duration-200">
           <div className="space-y-1">
             {navItems.map((item) => (
               <button
@@ -160,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="w-full text-left px-3.5 py-2.5 rounded-xl text-sm font-medium text-stone-800 hover:bg-white/60 transition-colors flex items-center justify-between min-h-[40px]"
             >
-              <span>Free Natural Colors Guide (0 NPR)</span>
+              <span>Natural Materials Guide</span>
               <span className="w-2 h-2 rounded-full bg-[#D95338]" />
             </button>
           </div>

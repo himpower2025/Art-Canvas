@@ -65,7 +65,7 @@ function StudioApp() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-[#141312] font-sans-custom flex flex-col selection:bg-[#FF3B20] selection:text-white relative">
+    <div className="min-h-screen bg-[#F0F8F5] text-[#141312] font-sans-custom flex flex-col selection:bg-[#FF3B20] selection:text-white relative">
       {/* Top Navigation */}
       <Navbar
         onOpenCanvas={() => handleOpenCanvas()}

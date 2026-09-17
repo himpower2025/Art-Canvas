@@ -49,7 +49,7 @@ export const LiveStudioWorkbench: React.FC<LiveStudioWorkbenchProps> = ({
     ctx.scale(dpr, dpr);
 
     // Initial subtle warm studio paper fill
-    ctx.fillStyle = '#FAF8F5';
+    ctx.fillStyle = '#F0F8F5';
     ctx.fillRect(0, 0, rect.width, rect.height);
 
     // Initial artistic invitation watermark
@@ -57,7 +57,7 @@ export const LiveStudioWorkbench: React.FC<LiveStudioWorkbenchProps> = ({
     ctx.font = 'italic 16px "Cormorant Garamond", Georgia, serif';
     ctx.fillStyle = 'rgba(120, 113, 108, 0.45)';
     ctx.textAlign = 'center';
-    ctx.fillText('Touch or drag across the linen to test the studio pigment...', rect.width / 2, rect.height / 2);
+    ctx.fillText('Touch or drag here to draw...', rect.width / 2, rect.height / 2);
     ctx.restore();
   }, []);
 
@@ -140,13 +140,13 @@ export const LiveStudioWorkbench: React.FC<LiveStudioWorkbenchProps> = ({
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const rect = canvas.getBoundingClientRect();
-    ctx.fillStyle = '#FAF8F5';
+    ctx.fillStyle = '#F0F8F5';
     ctx.fillRect(0, 0, rect.width, rect.height);
     setHasDrawn(false);
   };
 
   return (
-    <div className="relative bg-white rounded-3xl p-5 sm:p-7 art-matting border border-stone-200/90 transition-all text-left">
+    <div className="relative bg-white rounded-3xl p-5 sm:p-7 art-matting border border-[#D4ECE1] transition-all text-left">
       {/* Studio Header Bar */}
       <div className="flex items-center justify-between gap-3 pb-4 border-b border-stone-200/80">
         <div className="flex items-center gap-3">
@@ -193,7 +193,7 @@ export const LiveStudioWorkbench: React.FC<LiveStudioWorkbenchProps> = ({
       </div>
 
       {/* The Live Interactive Canvas Stage */}
-      <div className="relative mt-4 aspect-16/10 sm:aspect-16/9 w-full rounded-2xl overflow-hidden border border-stone-300/80 bg-[#FAF8F5] shadow-inner cursor-crosshair group touch-none">
+      <div className="relative mt-4 aspect-16/10 sm:aspect-16/9 w-full rounded-2xl overflow-hidden border border-[#D4ECE1] bg-[#F0F8F5] shadow-inner cursor-crosshair group touch-none">
         <canvas
           ref={canvasRef}
           onMouseDown={startDrawing}
@@ -209,7 +209,7 @@ export const LiveStudioWorkbench: React.FC<LiveStudioWorkbenchProps> = ({
         {/* Dynamic Studio Stamp */}
         <div className="absolute top-3 left-3 pointer-events-none select-none">
           <span className="px-2.5 py-1 rounded-md bg-stone-900/70 backdrop-blur-xs text-[9px] font-mono text-stone-200 tracking-widest uppercase">
-            300 DPI // HANDMADE LOKTA TEXTURE
+            STUDIO CANVAS
           </span>
         </div>
 
@@ -217,7 +217,7 @@ export const LiveStudioWorkbench: React.FC<LiveStudioWorkbenchProps> = ({
         {!hasDrawn && (
           <div className="absolute bottom-3 right-3 pointer-events-none select-none bg-white/95 backdrop-blur-xs border border-stone-200/90 px-3 py-1.5 rounded-full shadow-sm text-[11px] font-medium text-stone-700 flex items-center gap-1.5 animate-bounce">
             <Sparkles className="w-3.5 h-3.5 text-[#C84B31]" />
-            <span className="font-editorial-custom italic text-xs">Touch to make your mark</span>
+            <span className="font-editorial-custom italic text-xs">Draw here!</span>
           </div>
         )}
       </div>
@@ -227,13 +227,13 @@ export const LiveStudioWorkbench: React.FC<LiveStudioWorkbenchProps> = ({
         <div className="flex items-center justify-between text-xs">
           <span className="font-semibold text-stone-900 flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wider">
             <Droplets className="w-3.5 h-3.5 text-[#C84B31]" />
-            Himalayan Natural Pigments:
+            Natural Colors:
           </span>
           <button
             onClick={onOpenZeroBudgetGuide}
             className="text-[11px] text-[#C84B31] hover:underline font-medium"
           >
-            0-NPR Recipes →
+            Color Guide →
           </button>
         </div>
 

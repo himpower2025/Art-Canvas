@@ -36,23 +36,23 @@ export const Footer: React.FC<FooterProps> = ({
                     CHOI Art Studio
                   </span>
                   <span className="px-2 py-0.5 rounded-full bg-stone-800 text-[#C84B31] text-[10px] font-mono uppercase tracking-widest border border-stone-700">
-                    FREE STUDIO
+                    RESEARCH & TRAINING
                   </span>
                 </div>
                 <p className="text-xs text-stone-400 font-serif-custom italic mt-0.5">
-                  Kathmandu • Free Creative Art for Every Child in Nepal
+                  Kathmandu • Art Education & Teacher Training for Nepal's Schools
                 </p>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-stone-400 leading-relaxed max-w-lg font-sans-custom">
-              CHOI Art Studio offers free art education for youth across Nepal. We believe art is a wonderful way for every student to discover confidence, explore creativity, and express their thoughts through color and imagination.
+              CHOI Art Studio helps students express who they are through art. We train dedicated teachers and visit schools across Nepal, bringing learning and creative joy together.
             </p>
 
             <div className="p-4 rounded-2xl bg-stone-900/80 border border-stone-800 text-xs text-stone-300 flex items-start gap-3 shadow-inner">
               <Sparkles className="w-4 h-4 text-[#C84B31] shrink-0 mt-0.5" />
               <p className="font-editorial-custom italic text-stone-200 text-sm">
-                "Art is not a luxury — it gives every child a voice."
+                "Art gives every student a way to share what they feel and who they are."
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-stone-100 transition-colors flex items-center gap-1.5 font-sans-custom"
                 >
                   <Brush className="w-3.5 h-3.5 text-[#C84B31]" />
-                  <span>Online Drawing Canvas</span>
+                  <span>Drawing Canvas</span>
                 </button>
               </li>
               <li>
@@ -80,17 +80,17 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-stone-100 transition-colors flex items-center gap-1.5 font-sans-custom"
                 >
                   <Compass className="w-3.5 h-3.5 text-[#C84B31]" />
-                  <span>Free Natural Paints Guide</span>
+                  <span>Natural Materials Guide</span>
                 </button>
               </li>
               <li>
-                <span className="text-stone-400 font-sans-custom text-xs">Grades 1–5: Colors & Nature</span>
+                <span className="text-stone-400 font-sans-custom text-xs">Grades 1–5: Colors & Feelings</span>
               </li>
               <li>
-                <span className="text-stone-400 font-sans-custom text-xs">Grades 6–8: Shapes & Stories</span>
+                <span className="text-stone-400 font-sans-custom text-xs">Grades 6–8: Identity & Creative Voice</span>
               </li>
               <li>
-                <span className="text-stone-400 font-sans-custom text-xs">Grades 9–10: Voice & Style</span>
+                <span className="text-stone-400 font-sans-custom text-xs">Grades 9–10: Expressive Drawing</span>
               </li>
             </ul>
           </div>
@@ -98,15 +98,15 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Curatorial Commitment */}
           <div className="md:col-span-3 space-y-3.5 text-left">
             <h4 className="font-sans-custom text-xs text-stone-200 tracking-wider uppercase font-semibold">
-              Our Promise
+              Our Mission
             </h4>
             <p className="text-xs text-stone-400 leading-relaxed font-sans-custom">
-              100% free and open to everyone. Every lesson and paint recipe is made to work in any school or home without expensive supplies or internet.
+              We train enthusiastic art teachers for schools in Nepal. Every lesson combines real drawing skills with pure creative fun.
             </p>
             <div className="flex items-center gap-2 pt-1">
               <Award className="w-4 h-4 text-[#C84B31]" />
               <span className="font-mono text-[10px] text-stone-400 tracking-wider uppercase">
-                Always Free • Made for Nepal
+                Learning & Joy • Made for Nepal's Schools
               </span>
             </div>
           </div>

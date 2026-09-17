@@ -25,26 +25,26 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({
   const highCount = lessons.filter(l => l.gradeLevel === 'high').length;
 
   return (
-    <section id="curriculum" className="py-16 md:py-24 bg-[#FAF8F5] border-b border-stone-200/80">
+    <section id="curriculum" className="py-16 md:py-24 bg-[#F0F8F5] border-b border-[#D4ECE1]">
       <div className="studio-container">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-stone-200/80">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[#D4ECE1]">
           <div className="space-y-3 max-w-2xl xl:max-w-3xl text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-stone-700 text-xs font-mono tracking-widest uppercase border border-stone-300/80 shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-stone-700 text-xs font-mono tracking-widest uppercase border border-[#D4ECE1] shadow-2xs">
               <Layers className="w-3.5 h-3.5 text-[#C84B31]" />
-              <span>STATION 01 // ART LESSONS</span>
+              <span>ART LESSONS</span>
             </div>
             <h2 className="font-display-custom font-normal text-3xl sm:text-4xl md:text-5xl text-stone-900 tracking-tight">
               Art Lessons for Grades 1 to 10
             </h2>
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-sans-custom">
-              Free, easy-to-follow lessons created for students and teachers across Nepal. Every lesson uses simple everyday supplies, step-by-step videos, and joyful creative prompts.
+              Step-by-step drawing lessons for students across Nepal. Learn skills, have fun, and express your creative ideas.
             </p>
           </div>
 
           {/* Level Filter Tabs */}
           <div className="w-full md:w-auto overflow-x-auto no-scrollbar py-1">
-            <div className="inline-flex items-center gap-1.5 bg-[#F2ECE1]/80 p-1.5 rounded-2xl border border-stone-300/80 min-w-max shadow-2xs">
+            <div className="inline-flex items-center gap-1.5 bg-[#E4F4EC] p-1.5 rounded-2xl border border-[#CCE8DB] min-w-max shadow-2xs">
               {[
                 { id: 'all', label: 'All Grades (1–10)', count: lessons.length },
                 { id: 'primary', label: 'Grades 1–5 (Primary)', count: primaryCount },
@@ -144,7 +144,7 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({
                   </p>
 
                   {/* Expressive Focus Card */}
-                  <div className="p-3.5 rounded-xl bg-[#FAF8F5] border-l-2 border-[#C84B31] text-xs text-stone-700 space-y-1">
+                  <div className="p-3.5 rounded-xl bg-[#F2FAF6] border-l-2 border-[#C84B31] text-xs text-stone-700 space-y-1">
                     <span className="font-mono text-[10px] text-stone-500 uppercase tracking-wider block">
                       What you'll discover:
                     </span>
